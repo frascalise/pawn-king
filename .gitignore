@@ -34,3 +34,6 @@
 # Editor files
 .vscode/
 .idea/ 
+
+# MacOS
+.DS_Store

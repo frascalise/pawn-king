@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SRC="main.cc"
+OUT="pawnking"
+
+# Compila il programma
+g++ -std=c++17 "$SRC" -o "$OUT" -I/opt/homebrew/include -L/opt/homebrew/lib -lSDL3
+
+# Se la compilazione ha successo, esegui
+if [ $? -eq 0 ]; then
+    ./"$OUT"
+else
+    echo "Compilazione fallita."
+fi

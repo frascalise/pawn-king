@@ -1,10 +1,10 @@
 #!/bin/bash
 
-SRC="main.cc"
+SRC="main.cc src/main_menu.cc src/initializer.cc src/game_screen.cc"
 OUT="pawnking"
 
 # Compila il programma
-g++ -std=c++17 "$SRC" -o "$OUT" -I/opt/homebrew/include -L/opt/homebrew/lib -lSDL3
+g++ -std=c++17 $SRC -Iinclude -o "$OUT" -I/opt/homebrew/include -L/opt/homebrew/lib -lSDL3 -lSDL3_ttf
 
 # Se la compilazione ha successo, esegui
 if [ $? -eq 0 ]; then
